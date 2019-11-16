@@ -13,7 +13,7 @@ class User extends Authenticatable
     use Uuids, SoftDeletes ;
 
     public $incrementing = false;
-    
+
     use Notifiable;
 
     /**
@@ -22,7 +22,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'username', 'firstname','lastname','email', 'password','user_type_id',
     ];
 
     /**
