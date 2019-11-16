@@ -14,7 +14,16 @@ class CreateLocationsTable extends Migration
     public function up()
     {
         Schema::create('locations', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->uuid('id');
+            $table->primary('id');
+            $table->uuid('user_id');
+            $table->string('name');
+            $table->string('location');
+            $table->text('about');
+            $table->string('image')->nullable()->default('logo.png');
+            $table->string('cover_image')->nullable()->default('cover.png');
+            $table->string('phone_number')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
