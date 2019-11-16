@@ -18,7 +18,7 @@ class CreateRestaurantsTable extends Migration
             $table->primary('id');
             $table->uuid('user_id')->nullable();
             $table->string('name');
-            $table->string('location')->nullabele();
+            $table->string('location')->nullable();
             $table->text('description');
             $table->string('logo')->nullable()->default('logo.png');
             $table->string('cover_image')->nullable()->default('cover.png');
