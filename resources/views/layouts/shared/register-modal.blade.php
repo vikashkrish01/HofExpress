@@ -2,13 +2,15 @@
     <div class="modal-dialog">
         <div class="modal-content modal-popup">
             <a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-            <form action="#" class="popup-form" id="myRegister">
+            <form action="{{ route('register') }}" method ="POST" class="popup-form" id="myRegister">
+                @csrf
                 <div class="login_icon"><i class="icon_lock_alt"></i></div>
-                <input type="text" class="form-control form-white" placeholder="Name">
-                <input type="text" class="form-control form-white" placeholder="Last Name">
-                <input type="email" class="form-control form-white" placeholder="Email">
-                <input type="text" class="form-control form-white" placeholder="Password"  id="password1">
-                <input type="text" class="form-control form-white" placeholder="Confirm password"  id="password2">
+                <input type="text" class="form-control form-white" placeholder="First Name" name="firstname" required>
+                <input type="text" class="form-control form-white" placeholder="Last Name" name="lastname" required>
+                <input type="text" class="form-control form-white" placeholder="User Name" name="username" required>
+                <input type="email" class="form-control form-white" placeholder="Email" name="email" required>
+                <input type="password" class="form-control form-white" placeholder="Password"  id="password1" name="password" required>
+                <input type="password" class="form-control form-white" placeholder="Confirm password"  id="password2" name="password_confirmation" required>
                 <div id="pass-info" class="clearfix"></div>
                 <div class="checkbox-holder text-left">
                     <div class="checkbox">
